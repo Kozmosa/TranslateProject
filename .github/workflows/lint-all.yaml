@@ -26,13 +26,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Node environment and cache
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          # 为 yarn 启用缓存，提升 ci 运行速度
-          cache: 'yarn'
-
       - name: Install zhlint
         run: yarn global add zhlint
 
