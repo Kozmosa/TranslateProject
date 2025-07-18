@@ -1,14 +1,36 @@
 name: Lint All
 
 on:
+  # 有文章更改或 lint 配置文件更改推送到主分支时触发
+  push:
+    branches:
+      - main
+    paths:
+      - 'sources/**/*.md'
+      - '.scripts/.zhlintrc'
+  pull_request:
+    paths:
+      - 'sources/**/*.md'
+      - '.scripts/.zhlintrc'
+
+  # 允许手动触发
   workflow_dispatch:
 
 jobs:
   lint:
+    name: Lint All
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Set up Node environment and cache
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          # 为 yarn 启用缓存，提升 ci 运行速度
+          cache: 'yarn'
 
       - name: Install zhlint
         run: yarn global add zhlint
