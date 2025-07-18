@@ -4,7 +4,8 @@ on:
   # 有文章更改或 lint 配置文件更改推送到主分支时触发
   push:
     branches:
-      - main
+      - master
+      - fix_ci # for test
     paths:
       - 'sources/**/*.md'
       - '.scripts/.zhlintrc'
