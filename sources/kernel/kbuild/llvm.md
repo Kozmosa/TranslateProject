@@ -1,5 +1,5 @@
 ---
-status: proofread
+status: published
 title: "Building Linux with Clang/LLVM"
 author: Linux Kernel Community
 collector: tttturtle-russ
@@ -9,6 +9,8 @@ translated_date: 20250716
 proofreader: mudongliang
 proofread_date: 20250716
 priority: 10
+publisher: JasonC10
+published_date: 20250726
 link: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/kbuild/llvm.rst
 ---
 # 使用 Clang/LLVM 构建 Linux
@@ -122,7 +124,7 @@ LLVM 并不支持 Linux 内核所有可支持的架构，同样，即使 LLVM �
 -   [维基](https://github.com/ClangBuiltLinux/linux/wiki)
 -   [初学者问题](https://github.com/ClangBuiltLinux/linux/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
 
-## 获取 LLVM {#zh_cn_getting_llvm}
+## 获取 LLVM
 
 我们在 [kernel.org](https://kernel.org/pub/tools/llvm/)提供预编译的稳定版 LLVM。 这些版本已经针对 Linux 内核构建，使用配置文件数据进行优化。相较于其他发行版中的 LLVM，它们应该能提高内核构建效率。
 
